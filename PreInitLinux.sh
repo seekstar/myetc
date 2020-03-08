@@ -1,6 +1,6 @@
-# Place this file in init dir
-
 yes | sudo apt-get install git
+
+git remote add gitee git@gitee.com:searchstar/myetc.git
 
 bash extract_key.sh
 
@@ -11,15 +11,20 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_git
 yes | ssh -T git@gitee.com
 
-git config --global user.email "632863986@qq.com"
-git config --global user.name "searchstar"
-
 cd ~
 mkdir git
 cd git
 git clone git@gitee.com:searchstar/tools.git
+cd tools
+git remote rename origin gitee
 
-ln -s ~/git/tools/os/linux ~/linux
+ln -s ~/git/tools/os ~
+ln -s ~/git/tools/os/linux ~
+
+ln -s ~/linux/config/git_ssh_config.txt ~/.ssh/config
+
+cd ~/git
+bash ~/os/Init/git.sh
 
 bash ~/linux/config/000pre/index.sh
 
