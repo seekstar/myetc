@@ -8,7 +8,7 @@ cd ~/.ssh
 chmod 600 id_rsa_git
 #bash git_login.sh
 eval "$(ssh-agent -s)"
-ssh-add id_rsa_git
+ssh-add ~/.ssh/id_rsa_git
 yes | ssh -T git@gitee.com
 
 git config --global user.email "632863986@qq.com"
