@@ -1,6 +1,6 @@
 yes | sudo apt-get install git
 
-git remote rename origin gitee
+git remote add gitee git@gitee.com:searchstar/myetc.git
 
 bash extract_key.sh
 
