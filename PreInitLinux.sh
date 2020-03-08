@@ -28,6 +28,9 @@ ln -s ~/linux/config/git_ssh_config.txt ~/.ssh/config
 cd ~/git
 bash ~/os/Init/git.sh
 
+cd ~
+mkdir log
+
 echo Please do these things before proceeding:
 echo 1. change the mirror
 
