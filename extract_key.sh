@@ -1,9 +1,17 @@
 #!/bin/bash
 
-if [ ! -r ~/.ssh/id_rsa_git ]; then
-    echo Please enter the password:
+extract() {
 	read -s psswd
-	cat id_rsa_git.des3 | openssl des3 -d -k "$psswd" | tar zx -C ~/.ssh
+	cat id_rsa_git.des3 | openssl aes256 -d -k "$psswd" | tar zx -C ~/.ssh
+}
+
+if [ ! -r ~/.ssh/id_rsa_git ]; then
+	echo Please enter the password:
+	extract
+	while [ ! -r ~/.ssh/id_rsa_git ]; do
+		echo Fail to decipher. Please retry:
+		extract
+	done
 else
 	echo The key is already in ~/.ssh
 fi
