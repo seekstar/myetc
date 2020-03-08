@@ -1,4 +1,6 @@
-yes | sudo apt-get install git
+bash sudoers.sh
+
+sudo apt install -y git
 
 git remote add gitee git@gitee.com:searchstar/myetc.git
 
@@ -26,5 +28,6 @@ ln -s ~/linux/config/git_ssh_config.txt ~/.ssh/config
 cd ~/git
 bash ~/os/Init/git.sh
 
-bash ~/linux/config/000pre/index.sh
+echo Please do these things before proceeding:
+echo 1. change the mirror
 
