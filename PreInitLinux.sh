@@ -2,6 +2,7 @@ bash sudoers.sh
 
 sudo apt install -y git
 
+git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
 
 bash extract_key.sh
