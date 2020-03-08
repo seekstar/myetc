@@ -1,8 +1,7 @@
 #!/bin/bash
 
 extract() {
-	read -s psswd
-	cat id_rsa_git.des3 | openssl aes256 -d -k "$psswd" | tar zx -C ~/.ssh
+	cat id_rsa_git.aes256 | openssl aes256 -d | tar zx -C ~/.ssh
 }
 
 if [ ! -r ~/.ssh/id_rsa_git ]; then
