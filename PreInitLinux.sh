@@ -25,6 +25,7 @@ ln -s ~/git/tools/os ~
 ln -s ~/git/tools/os/linux ~
 
 ln -s ~/linux/config/git_ssh_config.txt ~/.ssh/config
+chmod 600 ~/.ssh/config
 
 cd ~/git
 bash ~/os/Init/git.sh
