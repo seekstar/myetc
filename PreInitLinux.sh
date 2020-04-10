@@ -1,6 +1,8 @@
+bash set_env.sh
+
 bash sudoers.sh
 
-sudo apt install -y git
+sudo $APT install -y git
 
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
