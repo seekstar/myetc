@@ -1,4 +1,6 @@
 bash set_env.sh
+mkdir ~/software
+ln -s $(pwd)/set_env.sh ~/software/
 
 bash sudoers.sh
 
