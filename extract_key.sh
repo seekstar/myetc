@@ -1,7 +1,7 @@
 #!/bin/bash
 
 extract() {
-	cat id_rsa_git.aes256 | openssl aes256 -md sha256 -d | tar zx -C ~/.ssh
+	bash ~/software/decipher.sh id_rsa_git.aes256 ~/.ssh
 }
 
 if [ ! -r ~/.ssh/id_rsa_git ]; then
