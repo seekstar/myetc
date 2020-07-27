@@ -13,6 +13,7 @@ git remote add gitee git@gitee.com:searchstar/myetc.git
 
 bash extract_key.sh
 
+mkdir -p ~/.ssh
 cd ~/.ssh
 chmod 600 id_rsa_git
 #bash git_login.sh
