@@ -3,7 +3,7 @@ ln -s $(pwd)/software/set_env.sh ~/software/
 ln -s $(pwd)/software//encrypt/encrypt.sh ~/software/
 ln -s $(pwd)/software//encrypt/decipher.sh ~/software/
 
-bash ~/software/set_env.sh
+source ~/software/set_env.sh
 bash sudoers.sh
 
 sudo $APT install -y git
