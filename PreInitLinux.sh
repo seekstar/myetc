@@ -11,9 +11,9 @@ sudo $APT install -y git
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
 
+mkdir -p ~/.ssh
 bash extract_key.sh
 
-mkdir -p ~/.ssh
 cd ~/.ssh
 chmod 600 id_rsa_git
 #bash git_login.sh
