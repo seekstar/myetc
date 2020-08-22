@@ -1,4 +1,4 @@
-mkdir ~/software
+mkdir -p ~/software
 ln -s $(pwd)/software/set_env.sh ~/software/
 ln -s $(pwd)/software//encrypt/encrypt.sh ~/software/
 chmod +x ~/software/encrypt.sh
@@ -7,6 +7,7 @@ chmod +x ~/software/decipher.sh
 
 source ~/software/set_env.sh
 bash sudoers.sh
+bash openssl.sh
 
 sudo $APT install -y git
 

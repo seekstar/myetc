@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# When the file is not encrypted with -pbkdf2, then use this version.
-
 #echo Please enter the password:
 #read -s psswd
 if [ $2 ]; then
