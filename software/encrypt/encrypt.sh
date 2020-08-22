@@ -3,7 +3,7 @@
 ori=$(pwd)
 cd $(dirname $1)
 if [ $2 ]; then
-	tar -zcf - $(basename $1) | openssl aes256 -salt -md sha256 > $ori/$2
+	tar -zcf - $(basename $1) | openssl aes256 -pbkdf2 -salt -md sha256 > $ori/$2
 else
 	echo Must specify the name of output file
 fi

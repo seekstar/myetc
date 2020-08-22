@@ -1,7 +1,9 @@
 mkdir ~/software
 ln -s $(pwd)/software/set_env.sh ~/software/
 ln -s $(pwd)/software//encrypt/encrypt.sh ~/software/
+chmod +x ~/software/encrypt.sh
 ln -s $(pwd)/software//encrypt/decipher.sh ~/software/
+chmod +x ~/software/decipher.sh
 
 source ~/software/set_env.sh
 bash sudoers.sh
@@ -22,7 +24,7 @@ ssh-add ~/.ssh/id_rsa_git
 yes | ssh -T git@gitee.com
 
 cd ~
-mkdir git
+mkdir -p git
 cd git
 git clone git@gitee.com:searchstar/tools.git
 cd tools
