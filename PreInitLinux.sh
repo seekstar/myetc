@@ -1,3 +1,5 @@
+bash public.sh
+
 mkdir -p ~/software
 ln -s $(pwd)/software/set_env.sh ~/software/
 ln -s $(pwd)/software//encrypt/encrypt.sh ~/software/
