@@ -1,4 +1,4 @@
-mkdir ~/.vim
+mkdir -p ~/.vim
 ln -s $(pwd)/.vimrc ~
 ln -s $(pwd)/tex.vimrc ~/.vim/
 ln -s $(pwd)/python.vimrc ~/.vim/
