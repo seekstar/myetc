@@ -36,7 +36,7 @@ git remote rename origin gitee
 ln -s ~/git/tools/os ~
 ln -s ~/git/tools/os/linux ~
 
-ln -s ~/linux/config/git_ssh_config.txt ~/.ssh/config
+cp ~/linux/config/git_ssh_config.txt ~/.ssh/config
 chmod 600 ~/.ssh/config
 
 cd ~/git
