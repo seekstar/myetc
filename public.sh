@@ -9,4 +9,5 @@ mkdir -p ~/SmallTools
 cd $THISDIR/software/small_tools
 make
 echo -e "alias jmake='make -j\$($HOME/SmallTools/hardware_concurrency)'" >> $HOME/.bashrc
+echo alias tp=\'trash-put\' >> $HOME/.bashrc
 
