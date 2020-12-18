@@ -5,4 +5,5 @@ sudo bash -c "echo -e \"[archlinuxcn]\nSigLevel = Never\nServer = https://mirror
 sudo pacman -Syyu
 
 sudo pacman -S yay vim
+yay --save --aururl aur.mirrors.ustc.edu.cn
 
