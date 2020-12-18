@@ -9,7 +9,8 @@ chmod +x ~/software/decipher.sh
 
 source ~/software/set_env.sh
 bash sudoers.sh
-bash openssl.sh
+chmod +x openssl.sh
+./openssl.sh
 
 sudo $APT install -y git
 
