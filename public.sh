@@ -1,3 +1,4 @@
+# Since this repository has been cloned, git should have been installed.
 git config --global user.email "632863986@qq.com"
 git config --global user.name "Jiansheng QIU"
 
