@@ -11,13 +11,6 @@ cd ../small_tools
 bash deploy.sh
 cd ../..
 
-if [ -d ~/模板 ]; then
-	mv ~/模板 ~/Templates
-else
-	mkdir -p ~/Templates
-fi
 cd config/Templates
-ln -s $(pwd)/cpp.cpp ~/Templates/
-ln -s $(pwd)/c.c ~/Templates/
-ln -s $(pwd)/launcher.desktop ~/Templates/
+bash deploy.sh
 
