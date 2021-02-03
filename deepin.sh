@@ -1,2 +1,2 @@
-sudo apt install -y git build-essential
+sudo apt install -y build-essential
 bash PreInitLinux.sh
