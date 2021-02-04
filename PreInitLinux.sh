@@ -13,6 +13,7 @@ git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
 
 mkdir -p ~/.ssh
+chmod 700 ~/.ssh
 bash extract_key.sh
 
 cd ~/.ssh
@@ -32,7 +33,7 @@ git remote rename origin gitee
 ln -s ~/git/tools/os ~
 ln -s ~/git/tools/os/linux ~
 
-cp ~/linux/config/git_ssh_config.txt ~/.ssh/config
+cp ~/linux/config/ssh_config.txt ~/.ssh/config
 chmod 600 ~/.ssh/config
 
 cd ~/git
