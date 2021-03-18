@@ -1,1 +1,4 @@
-sudo yum install make gcc gcc-g++
+sudo yum install make gcc
+# At least one will work.
+sudo yum install gcc-g++
+sudo yum install gcc-c++
