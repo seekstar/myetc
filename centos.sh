@@ -4,4 +4,5 @@ sudo yum install gcc-g++
 sudo yum install gcc-c++
 # pip3
 sudo yum install platform-python-devel
+sudo yum install clang gdb
 
