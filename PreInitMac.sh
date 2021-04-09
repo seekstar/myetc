@@ -3,3 +3,10 @@ echo 'export PATH="/usr/local/opt/libressl/bin:$PATH"' >> ~/.zshrc
 echo export LDFLAGS=\"-L/usr/local/opt/libressl/lib\" >> ~/.zshrc
 echo export CPPFLAGS=\"-I/usr/local/opt/libressl/include\" >> ~/.zshrc
 
+# xcrun error
+xcode-select --install
+
+brew install trash-cli
+
+bash public.sh
+bash unix.sh
