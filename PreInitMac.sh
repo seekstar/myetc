@@ -7,6 +7,11 @@ echo export CPPFLAGS=\"-I/usr/local/opt/libressl/include\" >> ~/.zshrc
 xcode-select --install
 
 brew install trash-cli
+brew install wget
 
 bash public.sh
 bash unix.sh
+
+# Latex
+# https://zhuanlan.zhihu.com/p/68929563
+# brew cask install basictex
