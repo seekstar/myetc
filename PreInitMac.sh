@@ -8,6 +8,7 @@ xcode-select --install
 
 brew install trash-cli
 brew install wget
+brew install cmake
 
 bash public.sh
 bash unix.sh
