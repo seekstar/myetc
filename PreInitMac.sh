@@ -2,7 +2,7 @@
 echo 'export PATH="/usr/local/opt/libressl/bin:$PATH"' >> ~/.zshrc
 echo export LDFLAGS=\"-L/usr/local/opt/libressl/lib\" >> ~/.zshrc
 echo export CPPFLAGS=\"-I/usr/local/opt/libressl/include\" >> ~/.zshrc
-echo alias nproc=\"sysctl -n hw.logicalcpu\" >> ~/.zshrc
+#echo alias nproc=\"sysctl -n hw.logicalcpu\" >> ~/.zshrc
 
 # xcrun error
 xcode-select --install
@@ -10,6 +10,8 @@ xcode-select --install
 brew install trash-cli
 brew install wget
 brew install cmake
+# nproc
+brew install coreutils
 
 # Do not generate .DS_Store. But not effective.
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
