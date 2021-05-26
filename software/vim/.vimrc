@@ -9,6 +9,9 @@ set backspace=indent,eol,start
 set noeol
 set nofixendofline
 
+colo koehler
+" delek ron
+
 map <C-A> ggvG$"+y
 
 "au BufRead,BufNewFile *.py set filetype=py
