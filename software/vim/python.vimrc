@@ -10,5 +10,6 @@ func! Run()
 	exec "!python3 %"
 endfunc
 
+map<F9> :w<CR>:call Run()<CR>
 map<C-F10> :w<CR>:call Run()<CR>
 

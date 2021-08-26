@@ -23,3 +23,4 @@ map <C-F9> :w<CR>:call Compile()<CR>
 map <C-F10> :call Run()<CR>
 map <F9> <C-F9><CR><C-F10>
 
+map <F5> :w<CR>:!cargo run<CR>
