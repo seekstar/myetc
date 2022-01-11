@@ -25,5 +25,5 @@ chmod 600 ~/.ssh/config
 cd ~/git
 bash ~/os/Init/git.sh
 
-cd ~
-mkdir log
+#cd ~
+#mkdir log
