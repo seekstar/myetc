@@ -1,3 +1,3 @@
 sudo pacman -S wget
-sudo pacman -S trash-cli
+bash pacman.sh
 bash PreInitLinux.sh
