@@ -2,6 +2,8 @@
 git config --global user.email "jianshengqiu.cs@gmail.com"
 git config --global user.name "Jiansheng QIU"
 
+echo 'export EDITOR=vim' >> ~/.bashrc
+
 THISDIR=$(pwd)
 cd software/vim
 bash deploy.sh
