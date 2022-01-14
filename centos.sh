@@ -6,3 +6,4 @@ sudo yum install gcc-c++
 sudo yum install platform-python-devel
 sudo yum install clang gdb
 
+sudo yum install bash-completion
