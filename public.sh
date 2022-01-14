@@ -22,6 +22,3 @@ ln -s $(pwd)/software/encrypt/encrypt.sh ~/software/
 chmod +x ~/software/encrypt.sh
 ln -s $(pwd)/software/encrypt/decipher.sh ~/software/
 chmod +x ~/software/decipher.sh
-
-git remote remove origin
-git remote add gitee git@gitee.com:searchstar/myetc.git

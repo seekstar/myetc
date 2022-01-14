@@ -2,6 +2,10 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 bash extract_key.sh
 
+git remote remove origin
+git remote add gitee git@gitee.com:searchstar/myetc.git
+
+
 cd ~/.ssh
 chmod 600 id_rsa_git
 #bash git_login.sh
