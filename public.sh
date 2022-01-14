@@ -25,5 +25,3 @@ chmod +x ~/software/decipher.sh
 
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
-
-bash unix.sh
