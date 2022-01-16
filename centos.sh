@@ -1,3 +1,4 @@
+sudo yum install vim
 sudo yum install make gcc
 # At least one will work.
 sudo yum install gcc-g++
