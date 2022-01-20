@@ -1,4 +1,4 @@
-sudo yum install vim
+bash yum.sh
 sudo yum install make gcc
 # At least one will work.
 sudo yum install gcc-g++
@@ -7,4 +7,3 @@ sudo yum install gcc-c++
 sudo yum install platform-python-devel
 sudo yum install clang gdb
 
-sudo yum install bash-completion
