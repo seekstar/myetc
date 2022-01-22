@@ -1,1 +1,1 @@
-sudo apt install -y trash-cli
+sudo apt install -y trash-cli vim
