@@ -2,7 +2,13 @@
 git config --global user.email "jianshengqiu.cs@gmail.com"
 git config --global user.name "Jiansheng Qiu"
 
-echo 'export EDITOR=vim' >> ~/.bashrc
+if [ ! -d ~/.profile.d ]; then
+	mkdir ~/.profile.d
+	cat config/profiles.txt >> ~/.profile
+fi
+
+echo 'export EDITOR=vim' > ~/.profile.d/editor-vim.sh
+echo "alias using=\"ps -e -o uid --no-headers | awk '\\\$1 >= 1000' | sort -u | xargs -i id -nu {}\"" > ~/.profile.d/using.sh
 
 THISDIR=$(pwd)
 cd software/vim

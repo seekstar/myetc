@@ -1,1 +1,1 @@
-echo alias tp=\'trash-put\' >> $HOME/.bashrc
+echo alias tp=\'trash-put\' > $HOME/.profile.d/tp.sh
