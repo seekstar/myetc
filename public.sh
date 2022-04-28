@@ -7,19 +7,12 @@ if [ ! -d ~/.profile.d ]; then
 	cat config/profiles.txt >> ~/.profile
 fi
 
-echo 'export EDITOR=vim' > ~/.profile.d/editor-vim.sh
-echo "alias using=\"ps -e -o uid --no-headers | awk '\\\$1 >= 1000' | sort -u | xargs -i id -nu {}\"" > ~/.profile.d/using.sh
-
 THISDIR=$(pwd)
-cd software/vim
+cd config
+cp -r profile.d/* ~/.profile.d/
+cd vim
 bash deploy.sh
-cd ../python
-bash deploy.sh
-cd ../small_tools
-bash deploy.sh
-cd ../..
-
-cd config/Templates
+cd ../Templates
 bash deploy.sh
 cd ../..
 
