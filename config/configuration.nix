@@ -10,7 +10,7 @@
 		./hardware-configuration.nix
 	];
 
-	nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+	#nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.searchstar = {
@@ -63,6 +63,10 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
+		# Needed by nutstore
+		python3
+		# JRE is needed by nutstore.
+		openjdk
 		vim # The Nano editor is also installed by default.
 		wget
 		firefox
@@ -73,6 +77,7 @@
 		iotop
 		jnettop
 		gnome.gnome-system-monitor
+		seafile-client
 	];
 
 	# List services that you want to enable:
