@@ -10,7 +10,7 @@
 		./hardware-configuration.nix
 	];
 
-	#nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+	nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.searchstar = {
@@ -27,7 +27,7 @@
 	boot.loader.grub.useOSProber = true;
 
 	# Set your time zone.
-	time.timeZone = "China/Shanghai";
+	time.timeZone = "Asia/Shanghai";
 
 	# The global useDHCP flag is deprecated, therefore explicitly set to false here.
 	# Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -38,15 +38,12 @@
 	networking.networkmanager.enable = true;
 
 	# Configure network proxy if necessary
-	# networking.proxy.default = "http://user:password@proxy:port/";
-	# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+	networking.proxy.default = "http://127.0.0.1:8234/";
+	networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
 	# Enable sound.
 	sound.enable = true;
 	hardware.pulseaudio.enable = true;
-
-	# Enable touchpad support (enabled default in most desktopManager).
-	services.xserver.libinput.enable = true;
 
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
@@ -60,12 +57,15 @@
 		firefox
 		git
 		openssl
-		clash
+		trash-cli
+		konsole
 		element-desktop
+		seafile-client
+		# Need enable in "Extensions" of GNOME
+		gnomeExtensions.tray-icons-reloaded
 		iotop
 		jnettop
 		gnome.gnome-system-monitor
-		seafile-client
 	];
 
 	# List services that you want to enable:
@@ -73,6 +73,8 @@
 	# Enable the X11 windowing system.
 	services.xserver.enable = true;
 
+	# Enable touchpad support (enabled default in most desktopManager).
+	services.xserver.libinput.enable = true;
 
 	# Enable the GNOME Desktop Environment.
 	services.xserver.displayManager.gdm.enable = true;
@@ -84,6 +86,15 @@
 	# Enable the OpenSSH daemon.
 	services.openssh.enable = true;
 	services.flatpak.enable = true;
+
+	i18n.inputMethod = {
+		enabled = "fcitx5";
+		fcitx.engines = with pkgs.fcitx-engines; [ rime ];
+		fcitx5.enableRimeData= true;
+		fcitx5.addons = with pkgs; [
+			fcitx5-rime
+		];
+	};
 
 	# This value determines the NixOS release from which the default
 	# settings for stateful data, like file locations and database versions
