@@ -6,6 +6,7 @@
 
 {
 	imports = [
+		./desktop-environment.nix
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
 	];
@@ -28,12 +29,6 @@
 
 	# Set your time zone.
 	time.timeZone = "Asia/Shanghai";
-
-	# The global useDHCP flag is deprecated, therefore explicitly set to false here.
-	# Per-interface useDHCP will be mandatory in the future, so this generated config
-	# replicates the default behaviour.
-	networking.useDHCP = false;
-	networking.interfaces.enp3s0.useDHCP = true;
 
 	networking.networkmanager.enable = true;
 
@@ -61,8 +56,6 @@
 		konsole
 		element-desktop
 		seafile-client
-		# Need enable in "Extensions" of GNOME
-		gnomeExtensions.tray-icons-reloaded
 		iotop
 		jnettop
 		gnome.gnome-system-monitor
@@ -75,10 +68,6 @@
 
 	# Enable touchpad support (enabled default in most desktopManager).
 	services.xserver.libinput.enable = true;
-
-	# Enable the GNOME Desktop Environment.
-	services.xserver.displayManager.gdm.enable = true;
-	services.xserver.desktopManager.gnome.enable = true;
 
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
