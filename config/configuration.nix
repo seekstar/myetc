@@ -41,18 +41,6 @@
 	# networking.proxy.default = "http://user:password@proxy:port/";
 	# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-	# Enable the X11 windowing system.
-	services.xserver.enable = true;
-
-
-	# Enable the GNOME Desktop Environment.
-	services.xserver.displayManager.gdm.enable = true;
-	services.xserver.desktopManager.gnome.enable = true;
-  
-
-	# Enable CUPS to print documents.
-	services.printing.enable = true;
-
 	# Enable sound.
 	sound.enable = true;
 	hardware.pulseaudio.enable = true;
@@ -82,6 +70,17 @@
 
 	# List services that you want to enable:
 
+	# Enable the X11 windowing system.
+	services.xserver.enable = true;
+
+
+	# Enable the GNOME Desktop Environment.
+	services.xserver.displayManager.gdm.enable = true;
+	services.xserver.desktopManager.gnome.enable = true;
+
+	# Enable CUPS to print documents.
+	services.printing.enable = true;
+
 	# Enable the OpenSSH daemon.
 	services.openssh.enable = true;
 	services.flatpak.enable = true;
@@ -92,7 +91,7 @@
 	# this value at the release version of the first install of this system.
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-	system.stateVersion = "21.11"; # Did you read the comment?
+	system.stateVersion = "22.05"; # Did you read the comment?
 
 }
 
