@@ -48,7 +48,6 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-		# Needed by nutstore
 		python3
 		# JRE is needed by nutstore.
 		openjdk
@@ -61,6 +60,9 @@
 		konsole
 		element-desktop
 		seafile-client
+		nodePackages.npm
+		nodejs
+		nixos.python310Packages.pip
 		iotop
 		jnettop
 		gnome.gnome-system-monitor
