@@ -3,6 +3,9 @@ set sw=4
 set softtabstop=4
 set smartindent	" next level indent
 
+vmap <C-P> :s,^,% ,<CR>
+vmap <C-M> :s,^% ,,<CR>
+
 func! Compile_pdflatex()
 	exec "!pdflatex %"
 endfunc
