@@ -8,7 +8,7 @@ vmap <C-P> :s,^,// ,<CR>
 vmap <C-M> :s,^// ,,<CR>
 
 func! Compile()
-	exec "!g++ -std=c++14 -Wall -g % -o %< -lpthread"
+	exec "!g++ -std=c++17 -Wall -g % -o %< -lpthread"
 endfunc
 
 func! Run()
@@ -30,7 +30,7 @@ endfunc
 
 map <C-S-F9> :w<CR>:call CompileRelease()<CR>
 func! CompileRelease()
-	exec "!g++ -std=c++14 -Wall -O3 % -o %<"
+	exec "!g++ -std=c++17 -Wall -O3 % -o %<"
 endfunc
 
 
