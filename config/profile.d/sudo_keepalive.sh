@@ -2,7 +2,7 @@ function sudo_keepalive {
 	sudo -v || exit $?
 	while true; do
 		sudo -nv 
-		sleep 1
+		sleep 60
 	done &
 	trap "kill $!" EXIT
 }
