@@ -4,7 +4,11 @@ git config --global user.name "Jiansheng Qiu"
 
 if [ ! -d ~/.profile.d ]; then
 	mkdir ~/.profile.d
-	cat config/profiles.txt >> ~/.profile
+	cat >> ~/.profile <<EOF
+for i in \$HOME/.profile.d/*.sh; do
+        source \$i
+done
+EOF
 fi
 
 THISDIR=$(pwd)
