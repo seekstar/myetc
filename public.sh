@@ -14,6 +14,8 @@ fi
 THISDIR=$(pwd)
 cd config
 cp -r profile.d/* ~/.profile.d/
+cp rc ~/.rc
+mkdir -p ~/.rc.d
 cd vim
 bash deploy.sh
 cd ../Templates

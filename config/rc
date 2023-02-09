@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+find ~/.rc.d/ -type f -exec bash {} \;
