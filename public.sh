@@ -16,6 +16,9 @@ cd config
 cp -r profile.d/* ~/.profile.d/
 cp rc ~/.rc
 mkdir -p ~/.rc.d
+cp systemd-user/rc.service ~/.config/systemd/user/
+systemctl --user daemon-reload
+systemctl --user enable --now rc.service
 cd vim
 bash deploy.sh
 cd ../Templates

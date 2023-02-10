@@ -1,0 +1,8 @@
+[Unit]
+Description=Execute ~/.rc at startup
+
+[Service]
+ExecStart=bash -c "~/.rc"
+
+[Install]
+WantedBy=default.target
