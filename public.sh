@@ -16,6 +16,7 @@ cd config
 cp -r profile.d/* ~/.profile.d/
 cp rc ~/.rc
 mkdir -p ~/.rc.d
+mkdir -p ~/.config/systemd/user
 cp systemd-user/rc.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 systemctl --user enable --now rc.service
