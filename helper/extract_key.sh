@@ -1,7 +1,12 @@
 #!/bin/bash
 
+if [ ! $1 ]; then
+	echo $Usage: $0 aes256-file
+	exit 1
+fi
+
 extract() {
-	bash ~/software/decipher.sh id_rsa_git.aes256 ~/.ssh
+	bash ~/software/decipher.sh $1 ~/.ssh
 }
 
 if [ ! -d ~/.ssh/ ]; then

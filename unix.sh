@@ -1,6 +1,8 @@
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-bash extract_key.sh
+bash helper/seaf-cli.sh
+bash helper/seafile-init.sh
+bash helper/extract_key.sh ~/seafile/init/id_rsa_git.aes256
 
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
