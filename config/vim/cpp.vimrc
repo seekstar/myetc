@@ -8,7 +8,11 @@ vmap <C-P> :s,^,// ,<CR>
 vmap <C-M> :s,^// ,,<CR>
 
 func! Compile()
-	exec "!g++ -std=c++17 -Wall -g % -o %< -lpthread"
+	if filereadable('Makefile')
+		exec "!make %<"
+	else
+		exec "!g++ -std=c++17 -Wall -g % -o %< -lpthread"
+	endif
 endfunc
 
 func! Run()
