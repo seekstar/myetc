@@ -1,1 +1,3 @@
-sudo yum install vim bash-completion trash-cli
+# trash-cli
+sudo yum install vim bash-completion tar
+

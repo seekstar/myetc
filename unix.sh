@@ -1,8 +1,11 @@
+mkdir -p ~/git
+cd ~/git
+git clone https://gitee.com/searchstar/init.git
+cd - > /dev/null
+
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-bash helper/seaf-cli.sh
-bash helper/seafile-init.sh
-bash helper/extract_key.sh ~/seafile/init/id_rsa_git.aes256
+bash helper/extract_key.sh ~/git/init/id_rsa_git.aes256
 
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
@@ -15,9 +18,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_git
 yes | ssh -T git@gitee.com
 
-cd ~
-mkdir -p git
-cd git
+cd ~/git
 git clone git@gitee.com:searchstar/tools.git
 cd tools
 git remote rename origin gitee

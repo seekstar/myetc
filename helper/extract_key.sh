@@ -15,10 +15,10 @@ if [ ! -d ~/.ssh/ ]; then
 fi
 if [ ! -r ~/.ssh/id_rsa_git ]; then
 	echo Please enter the password:
-	extract
+	extract $1
 	while [ ! -r ~/.ssh/id_rsa_git ]; do
 		echo Fail to decipher. Please retry:
-		extract
+		extract $1
 	done
 else
 	echo The key is already in ~/.ssh
