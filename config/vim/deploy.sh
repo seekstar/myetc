@@ -8,4 +8,4 @@ ln -s $(pwd)/c.vimrc ~/.vim/
 ln -s $(pwd)/cpp.vimrc ~/.vim/
 ln -s $(pwd)/rs.vimrc ~/.vim/
 ln -s $(pwd)/go.vimrc ~/.vim/
-
+ln -s $(pwd)/yaml.vimrc ~/.vim/

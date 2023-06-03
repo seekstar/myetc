@@ -24,6 +24,7 @@ autocmd FileType vim source ~/.vim/vim.vimrc
 autocmd FileType sh source ~/.vim/sh.vimrc
 autocmd FileType rust source ~/.vim/rs.vimrc
 autocmd FileType go source ~/.vim/go.vimrc
+autocmd FileType yaml source ~/.vim/yaml.vimrc
 
 autocmd BufNewFile *.cpp 0r ~/Templates/cpp.cpp
 autocmd BufNewFile *.c 0r ~/Templates/c.c
