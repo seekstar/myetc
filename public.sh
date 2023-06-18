@@ -26,6 +26,10 @@ cd ../Templates
 bash deploy.sh
 cd ../..
 
+cd universal
+bash python.sh
+cd ..
+
 mkdir -p ~/software
 ln -s $(pwd)/software/encrypt/encrypt.sh ~/software/
 chmod +x ~/software/encrypt.sh
