@@ -1,5 +1,8 @@
+" tabstop	number of spaces a <Tab> in the text stands for
 set ts=4
+" shiftwidth	number of spaces used for each step of (auto)indent
 set sw=4
+" softtabstop	if non-zero, number of spaces to insert for a <Tab>
 set softtabstop=4
 set smartindent	" next level indent
 
