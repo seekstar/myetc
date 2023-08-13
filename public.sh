@@ -28,6 +28,7 @@ cd ../..
 
 cd universal
 bash python.sh
+bash zsh.sh
 cd ..
 
 mkdir -p ~/software
