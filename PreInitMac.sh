@@ -18,7 +18,7 @@ brew install coreutils
 # reboot
 
 bash public.sh
-bash unix.sh
+bash private.sh
 
 # Latex
 # https://zhuanlan.zhihu.com/p/68929563

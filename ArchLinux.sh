@@ -5,4 +5,4 @@
 #sudo systemctl start reflector.timer
 
 bash pacman.sh
-bash PreInitLinux.sh
+bash public.sh
