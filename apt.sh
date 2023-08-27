@@ -1,1 +1,1 @@
-sudo apt install -y python3-pip trash-cli vim
+sudo apt install -y trash-cli vim
