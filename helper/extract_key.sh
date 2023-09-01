@@ -13,10 +13,10 @@ if [ ! -d ~/.ssh/ ]; then
 	mkdir ~/.ssh
 	chmod 700 ~/.ssh
 fi
-if [ ! -r ~/.ssh/id_rsa_git ]; then
+if [ ! -r ~/.ssh/id_rsa ]; then
 	echo Please enter the password:
 	extract $1
-	while [ ! -r ~/.ssh/id_rsa_git ]; do
+	while [ ! -r ~/.ssh/id_rsa ]; do
 		echo Fail to decipher. Please retry:
 		extract $1
 	done

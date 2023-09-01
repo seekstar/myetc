@@ -5,17 +5,15 @@ cd - > /dev/null
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-bash helper/extract_key.sh ~/git/init/id_rsa_git.aes256
+bash helper/extract_key.sh ~/git/init/id_rsa.aes256
 
 git remote remove origin
 git remote add gitee git@gitee.com:searchstar/myetc.git
 
 
 cd ~/.ssh
-chmod 600 id_rsa_git
-#bash git_login.sh
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa_git
+ssh-add ~/.ssh/id_rsa
 yes | ssh -T git@gitee.com
 
 cd ~/git
