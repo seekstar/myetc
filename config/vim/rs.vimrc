@@ -2,6 +2,7 @@ set ts=4
 set sw=4
 set et
 set si
+set colorcolumn=80
 
 vmap <C-P> :s,^,// ,<CR>
 vmap <C-M> :s,^// ,,<CR>

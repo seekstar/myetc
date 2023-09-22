@@ -3,6 +3,7 @@ set sw=4
 set softtabstop=4
 set cindent
 set smartindent	" next level indent
+set colorcolumn=80
 
 vmap <C-P> :s,^,// ,<CR>
 vmap <C-M> :s,^// ,,<CR>
