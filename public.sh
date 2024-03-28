@@ -1,3 +1,5 @@
+chmod 700 ~
+
 # Since this repository has been cloned, git should have been installed.
 git config --global user.email "jianshengqiu.cs@gmail.com"
 git config --global user.name "Jiansheng Qiu"
@@ -7,7 +9,7 @@ if [ ! -d ~/.profile.d ]; then
 	mkdir ~/.profile.d
 	cat >> ~/.profile <<EOF
 for i in \$HOME/.profile.d/*.sh; do
-        source \$i
+	source \$i
 done
 EOF
 fi
