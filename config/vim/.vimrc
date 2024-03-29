@@ -1,4 +1,6 @@
 syntax on
+" Disable mouse
+set mouse-=a
 set nu
 set autoindent	" same level indent
 set nocompatible
