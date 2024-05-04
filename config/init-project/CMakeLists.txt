@@ -19,7 +19,9 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
 	PRIVATE
 )
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
+# target_compile_features can omit -std flag in compile_commands.json
+# https://gitlab.kitware.com/cmake/cmake/-/issues/23397
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
 
 #target_compile_features(${PROJECT_NAME} PRIVATE c_auto_type)
 set(CMAKE_C_STANDARD 11)
