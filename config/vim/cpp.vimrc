@@ -33,10 +33,11 @@ func! DEBUG_GDB()
 	exec "!gdb %<"
 endfunc
 
-map <C-S-F9> :w<CR>:call CompileRelease()<CR>
 func! CompileRelease()
 	exec "!g++ -std=c++17 -Wall -O3 % -o %<"
 endfunc
+map <C-S-F9> :w<CR>:call CompileRelease()<CR>
+map <S-F9> <C-S-F9><CR><C-F10>
 
 
 
