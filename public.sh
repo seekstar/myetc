@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 chmod 700 ~
 
 # Since this repository has been cloned, git should have been installed.
