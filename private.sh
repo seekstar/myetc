@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 mkdir -p ~/git
 cd ~/git
 git clone https://gitee.com/searchstar/init.git
