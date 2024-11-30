@@ -13,4 +13,5 @@ git remote add origin git@gitee.com:searchstar/myetc.git
 git pull origin master --set-upstream
 
 cd ~/git
+git clone git@gitee.com:searchstar/server.git
 git clone git@gitee.com:searchstar/tools.git
