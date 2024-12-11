@@ -6,3 +6,4 @@ sed "s,__home__,$HOME,g" supervisord.conf > ~/.config/supervisord.conf
 echo "supervisord -c $HOME/.config/supervisord.conf" > ~/.rc.d/supervisor.sh
 sh ~/.rc.d/supervisor.sh
 echo 'alias mysupervisor="supervisorctl -c ~/.config/supervisord.conf"' > ~/.profile.d/mysupervisor.sh
+ln -s $(pwd)/mysupervisor ~/.local/bin
