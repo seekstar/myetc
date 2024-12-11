@@ -42,6 +42,9 @@ cd ../..
 
 cd universal
 ./python.sh
+cd supervisor
+./deploy.sh
+cd ..
 ./zsh.sh
 cd ..
 
