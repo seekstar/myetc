@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 mkdir -p ~/.vim
 ln -s $(pwd)/.vimrc ~
 ln -s $(pwd)/tex.vimrc ~/.vim/

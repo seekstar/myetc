@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 if [ -d ~/模板 ]; then
     mv ~/模板 ~/Templates
 else

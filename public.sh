@@ -35,14 +35,14 @@ cp systemd-user/rc.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 systemctl --user enable --now rc.service
 cd vim
-bash deploy.sh
+./deploy.sh
 cd ../Templates
-bash deploy.sh
+./deploy.sh
 cd ../..
 
 cd universal
-bash python.sh
-bash zsh.sh
+./python.sh
+./zsh.sh
 cd ..
 
 mkdir -p ~/software
