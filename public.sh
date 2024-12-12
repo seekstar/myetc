@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 chmod 700 ~
+mkdir -p ~/.local/bin
 
 # Since this repository has been cloned, git should have been installed.
 git config --global user.email "jianshengqiu.cs@gmail.com"
