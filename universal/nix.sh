@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
-sh <(curl https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install) --daemon --no-channel-add --yes
+tmp=$(mktemp)
+curl https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install > $tmp
+sh $tmp --daemon --no-channel-add --yes
+rm $tmp
 . /etc/profile
 
 sudo bash -c "echo substituters = https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store https://cache.nixos.org/ >> /etc/nix/nix.conf"
