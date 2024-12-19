@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 if [ ! $1 ]; then
 	echo Usage: $0 input-file [output-dir,default:current dir]

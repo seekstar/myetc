@@ -33,8 +33,10 @@ cp rc ~/.rc
 mkdir -p ~/.rc.d
 mkdir -p ~/.config/systemd/user
 cp systemd-user/rc.service ~/.config/systemd/user/
-systemctl --user daemon-reload
-systemctl --user enable --now rc.service
+if systemctl --version 2> /dev/null; then
+	systemctl --user daemon-reload
+	systemctl --user enable --now rc.service
+fi
 cd vim
 ./deploy.sh
 cd ../Templates

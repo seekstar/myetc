@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 if [ ! $1 ]; then
 	echo $Usage: $0 aes256-file
@@ -6,7 +6,7 @@ if [ ! $1 ]; then
 fi
 
 extract() {
-	bash ~/software/decipher.sh $1 ~/.ssh
+	~/software/decipher.sh $1 ~/.ssh
 }
 
 if [ ! -d ~/.ssh/ ]; then
