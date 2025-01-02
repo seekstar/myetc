@@ -45,6 +45,7 @@ cd ../..
 
 cd universal
 ./python.sh
+. ~/.profile
 cd supervisor
 ./deploy.sh
 cd ..
