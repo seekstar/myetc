@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-pip3 install supervisor
+if ! command -v supervisorctl > /dev/null 2>&1; then
+	pip3 install supervisor
+fi
 mkdir -p ~/.local/supervisor/log
 mkdir -p ~/.config/supervisor.d
 sed "s,__home__,$HOME,g" supervisord.conf > ~/.config/supervisord.conf
