@@ -50,11 +50,13 @@
 		seafile-client
 		seafile-shared
 		gedit
+		noto-fonts-cjk-sans
 		firefox
 		vscode
 		keepassxc
 		element-desktop
-		gnome-system-monitor
+
+		wechat-uos
 	];
 
 	# List services that you want to enable:
