@@ -1,3 +1,6 @@
 #!/usr/bin/env sh
 
+# Deepin V23 needs this
+. ~/.profile
+
 find ~/.rc.d/ -type f -exec bash {} \;
