@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 if [ ! $1 ]; then
 	echo $Usage: $0 aes256-file
 	exit 1
@@ -13,10 +12,10 @@ if [ ! -d ~/.ssh/ ]; then
 	mkdir ~/.ssh
 	chmod 700 ~/.ssh
 fi
-if [ ! -r ~/.ssh/id_rsa ]; then
+if [ ! -r ~/.ssh/id_ed25519 ]; then
 	echo Please enter the password:
 	extract $1
-	while [ ! -r ~/.ssh/id_rsa ]; do
+	while [ ! -r ~/.ssh/id_ed25519 ]; do
 		echo Fail to decipher. Please retry:
 		extract $1
 	done

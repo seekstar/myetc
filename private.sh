@@ -8,7 +8,7 @@ cd - > /dev/null
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-bash helper/extract_key.sh ~/git/init/id_ed25519.aes256
+./helper/extract_key.sh ~/git/init/id_ed25519.aes256
 
 git remote remove origin
 git remote add origin git@gitee.com:searchstar/myetc.git
