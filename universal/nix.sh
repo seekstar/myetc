@@ -11,3 +11,5 @@ sudo -i nix-channel --update
 nix-channel --add https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
 nix-channel --update
 sudo systemctl restart nix-daemon.service
+
+echo 'export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"' > ~/.profile.d/nix.sh
