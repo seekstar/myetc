@@ -11,18 +11,18 @@ git config --global pull.ff only
 if [ ! -d ~/.profile.d ]; then
 	mkdir ~/.profile.d
 	cat >> ~/.profile <<EOF
-append_path () {
+prepend_path () {
 	case ":\$PATH:" in
 		*:"\$1":*)
 			;;
         *)
-            PATH="\${PATH:+\$PATH:}\$1"
+            PATH="\$1\${PATH:+:\$PATH}"
     esac
 }
 for i in \$HOME/.profile.d/*.sh; do
 	. \$i
 done
-unset -f append_path
+unset -f prepend_path
 EOF
 fi
 
