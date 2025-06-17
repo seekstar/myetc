@@ -14,10 +14,7 @@ echo export CPPFLAGS=\"-I/usr/local/opt/libressl/include\" >> ~/.zshrc
 xcode-select --install
 
 brew install trash-cli
-brew install wget
-brew install cmake
-# nproc
-brew install coreutils
+brew install visual-studio-code
 
 # Do not generate .DS_Store. But not effective.
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
