@@ -15,6 +15,9 @@ xcode-select --install
 
 brew install trash-cli
 brew install visual-studio-code
+# Clipboard manager
+brew install maccy
+
 brew install wechatwork
 brew install tencent-meeting
 
