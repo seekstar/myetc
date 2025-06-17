@@ -15,6 +15,8 @@ xcode-select --install
 
 brew install trash-cli
 brew install visual-studio-code
+brew install wechatwork
+brew install tencent-meeting
 
 # Do not generate .DS_Store. But not effective.
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
