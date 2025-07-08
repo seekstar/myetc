@@ -8,7 +8,6 @@ cd - > /dev/null
 echo 'export PATH="/usr/local/opt/libressl/bin:$PATH"' >> ~/.zshrc
 echo export LDFLAGS=\"-L/usr/local/opt/libressl/lib\" >> ~/.zshrc
 echo export CPPFLAGS=\"-I/usr/local/opt/libressl/include\" >> ~/.zshrc
-#echo alias nproc=\"sysctl -n hw.logicalcpu\" >> ~/.zshrc
 
 # xcrun error
 xcode-select --install
@@ -17,6 +16,8 @@ brew install trash-cli
 brew install visual-studio-code
 # Clipboard manager
 brew install maccy
+# The built-in terminal returns to the home of the terminal instead of the beginning of the line when the home key is pressed
+brew install iterm2
 
 brew install wechatwork
 brew install tencent-meeting
