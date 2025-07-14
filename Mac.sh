@@ -18,6 +18,8 @@ brew install visual-studio-code
 brew install maccy
 # The built-in terminal returns to the home of the terminal instead of the beginning of the line when the home key is pressed
 brew install iterm2
+# Make command+` switch to the last focused windows instead of iterate over all windows
+brew install alt-tab
 
 brew install wechatwork
 brew install tencent-meeting
