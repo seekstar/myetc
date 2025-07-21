@@ -25,3 +25,4 @@ fi
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 sed "s/__topic_name__/$topic_name/g" template/ntfy.sh > ~/software/notify.sh
+chmod +x ~/software/notify.sh
