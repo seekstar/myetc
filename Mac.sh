@@ -17,13 +17,16 @@ brew install visual-studio-code
 # Clipboard manager
 brew install maccy
 
-# The built-in terminal: The window doesn't close after exit. not working: home/end key, alt+left/right
+# The built-in terminal:
+#	Option works. Go to begin/end of line: ctrl+a/e.
+#	not working: home/end key, alt+left/right
 # iTerm2: Option not working
 # Ghostty: Can't use tmux in some ssh servers
-# Alacritty: Option, home/end key, alt+left/right, all not working
+# Alacritty: not working: Option, home/end key, alt+left/right
 # Hyper: Option+left works, Option+right not working
-# Kitty: Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
-brew install kitty
+# Kitty:
+#	In some ssh servers: top doesn't work. Tap auto-complete messes up for long file/directory names.
+#	Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
 
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
