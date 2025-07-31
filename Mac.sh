@@ -16,10 +16,15 @@ brew install trash-cli
 brew install visual-studio-code
 # Clipboard manager
 brew install maccy
-# The built-in terminal: Can't go to the home/end of the line with the home/end key or alt+<left/right-arrow>
+
+# The built-in terminal: The window doesn't close after exit. not working: home/end key, alt+left/right
 # iTerm2: Option not working
-# Ghostty: The home/end key doesn't work. But alt+<left/right-arrow> works
-brew install ghostty
+# Ghostty: Can't use tmux in some ssh servers
+# Alacritty: Option, home/end key, alt+left/right, all not working
+# Hyper: Option+left works, Option+right not working
+# Kitty: Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
+brew install kitty
+
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
 
