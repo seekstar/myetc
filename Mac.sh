@@ -16,8 +16,10 @@ brew install trash-cli
 brew install visual-studio-code
 # Clipboard manager
 brew install maccy
-# The built-in terminal returns to the home of the terminal instead of the beginning of the line when the home key is pressed
-brew install iterm2
+# The built-in terminal: Can't go to the home/end of the line with the home/end key or alt+<left/right-arrow>
+# iTerm2: Option not working
+# Ghostty: The home/end key doesn't work. But alt+<left/right-arrow> works
+brew install ghostty
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
 
