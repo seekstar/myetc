@@ -13,3 +13,6 @@ nix-channel --update
 sudo systemctl restart nix-daemon.service
 
 echo 'export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"' > ~/.profile.d/nix.sh
+
+mkdir -p ~/.config/nixpkgs/
+echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
