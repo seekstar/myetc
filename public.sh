@@ -52,6 +52,12 @@ cd ..
 ./zsh.sh
 cd ..
 
+cat >> ~/.bashrc <<EOF
+if [ \$VSCODE_SHELL_INTEGRATION ]; then
+	. ~/.profile
+fi
+EOF
+
 mkdir -p ~/software
 ln -s $(pwd)/software/encrypt/encrypt.sh ~/software/
 chmod +x ~/software/encrypt.sh
