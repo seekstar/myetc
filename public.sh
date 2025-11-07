@@ -3,10 +3,7 @@
 chmod 700 ~
 mkdir -p ~/.local/bin
 
-# Since this repository has been cloned, git should have been installed.
-git config --global user.email "jianshengqiu.cs@gmail.com"
-git config --global user.name "Jiansheng Qiu"
-git config --global pull.ff only
+./helper/git.sh
 
 if [ ! -d ~/.profile.d ]; then
 	mkdir ~/.profile.d
