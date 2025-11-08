@@ -5,7 +5,7 @@ if [ ! $1 ]; then
 fi
 
 extract() {
-	~/software/decipher.sh $1 ~/.ssh
+	$(dirname $0)/../software/encrypt/decipher.sh $1 ~/.ssh
 }
 
 if [ ! -d ~/.ssh/ ]; then
