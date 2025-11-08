@@ -1,4 +1,4 @@
-sh helper/git.sh
+./helper/git.sh
 
 # Essential
 winget install Seafile.Seafile
@@ -22,4 +22,4 @@ winget install AntibodySoftware.WizTree
 winget install CrystalDewWorld.CrystalDiskInfo
 
 # Slow
-winget install Kingsoft.WPSOffice.CN
+winget install --accept-package-agreements Kingsoft.WPSOffice.CN
