@@ -2,6 +2,7 @@ sh helper/git.sh
 
 # Essential
 winget install Seafile.Seafile
+winget install Seafile.Seadrive
 winget install python3
 winget install 7zip.7zip
 winget install Tencent.WeChat
