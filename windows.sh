@@ -7,7 +7,7 @@ winget install python3
 winget install 7zip.7zip
 winget install Tencent.WeChat
 winget install Tencent.TencentMeeting
-winget install SomePythonThings.WingetUIStore
+winget install Devolutions.UniGetUI
 
 # Important
 winget install Microsoft.VisualStudioCode
