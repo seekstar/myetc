@@ -21,12 +21,14 @@ brew install maccy
 #	Option works. Go to begin/end of line: ctrl+a/e.
 #	not working: home/end key, alt+left/right
 # iTerm2: Option not working
-# Ghostty: Can't use tmux in some ssh servers
 # Alacritty: not working: Option, home/end key, alt+left/right
 # Hyper: Option+left works, Option+right not working
 # Kitty:
 #	In some ssh servers: top doesn't work. Tap auto-complete messes up for long file/directory names.
 #	Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
+
+echo -e "Host *\n\tSetEnv TERM=xterm-256color" >> ~/.ssh/config
+# Ghostty
 
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
