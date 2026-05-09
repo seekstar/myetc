@@ -1,9 +1,11 @@
 #!/usr/bin/env sh
 cd ~/git
-git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
+if [ ! -d brew-install ]; then
+	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
+fi
 /bin/bash brew-install/install.sh
-rm -rf brew-install
 cd - > /dev/null
+. /etc/profile
 
 echo 'export PATH="/usr/local/opt/libressl/bin:$PATH"' >> ~/.zshrc
 echo export LDFLAGS=\"-L/usr/local/opt/libressl/lib\" >> ~/.zshrc
