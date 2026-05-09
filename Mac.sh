@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
 cd ~/git
 if [ ! -d brew-install ]; then
 	git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
@@ -30,7 +33,7 @@ brew install maccy
 #	Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
 
 echo -e "Host *\n\tSetEnv TERM=xterm-256color" >> ~/.ssh/config
-# Ghostty
+brew install ghostty
 
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
