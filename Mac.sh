@@ -35,6 +35,7 @@ echo -e "Host *\n\tSetEnv TERM=xterm-256color" >> ~/.ssh/config
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
 
+brew install wechat
 brew install wechatwork
 brew install tencent-meeting
 
