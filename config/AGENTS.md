@@ -7,3 +7,7 @@ Do NOT hard-wrap paragraphs in Markdown. Write each paragraph as a single long l
 ## Shell Environment
 
 The AI agent's shell is non-login and non-interactive, so `~/.profile` is not auto-sourced. Every shell command executed by the agent should be prefixed with `source ~/.profile &&` so that the correct toolchain and environment variables are loaded. Example: `source ~/.profile && gcc --version`
+
+## Code Style: Self-Documenting Code
+
+Prefer self-documenting code over comments. Write comments only when they explain intent or context the code itself cannot convey (non-obvious rationale, invariants, trade-offs, references to issues, etc.). Do NOT write comments that merely restate what the code does.
