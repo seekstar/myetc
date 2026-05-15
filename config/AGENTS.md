@@ -11,3 +11,7 @@ The AI agent's shell is non-login and non-interactive, so `~/.profile` is not au
 ## Code Style: Self-Documenting Code
 
 Prefer self-documenting code over comments. Write comments only when they explain intent or context the code itself cannot convey (non-obvious rationale, invariants, trade-offs, references to issues, etc.). Do NOT write comments that merely restate what the code does.
+
+## C++ Formatting
+
+If the project contains a `.clang-format` file, run `clang-format -i <file>` on every C++ source/header file you modify to ensure consistent formatting.
