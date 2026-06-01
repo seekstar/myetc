@@ -15,3 +15,17 @@ Prefer self-documenting code over comments. Write comments only when they explai
 ## C++ Formatting
 
 If the project contains a `.clang-format` file, run `clang-format -i <file>` on every C++ source/header file you modify to ensure consistent formatting.
+
+## C++ Designated Initializer Style
+
+When using C++ designated initializers (e.g., in vector of structs), put each field on its own line with a trailing comma for readability:
+
+```cpp
+std::vector<Entry> expected = {
+    {
+        .field1 = value1,
+        .field2 = value2,
+        .field3 = value3,
+    },
+};
+```
