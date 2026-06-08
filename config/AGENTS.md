@@ -14,11 +14,7 @@ Prefer self-documenting code over comments. Write comments only when they explai
 
 ## Code Style: Comments Describe Present, Not History
 
-Comments must describe the current behavior and intent of the code, not its history. Future readers cannot see code that has been deleted or replaced, so phrases like "previously X, now Y", "fixed: the old implementation did Z", "to keep parity with the legacy logic", or "this used to be a free function" are noise — they reference state that no longer exists in the file.
-
-The only place to record "why we changed it" is the commit message and git blame; the source file itself should read as if the current implementation has always been this way. State the current contract positively (e.g. "single quotes are taken literally") instead of contrasting against a deleted version (e.g. "unlike the previous implementation, single quotes are now respected").
-
-This applies equally to test files: a test comment should explain what behavior the test pins down, not which bug it once caught.
+Comments describe the current behavior and intent of the code, not its history. Readers cannot see deleted or replaced code, so phrases like "previously X, now Y", "fixed: the old implementation did Z", or "to keep parity with the legacy logic" are noise. State the current contract positively ("single quotes are taken literally"), not as a contrast against a deleted version. History belongs in commit messages and git blame. This applies equally to tests: comment what behavior the test pins down, not which bug it once caught.
 
 ## C++ Formatting
 
