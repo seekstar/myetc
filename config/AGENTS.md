@@ -12,6 +12,14 @@ The AI agent's shell is non-login and non-interactive, so `~/.profile` is not au
 
 Prefer self-documenting code over comments. Write comments only when they explain intent or context the code itself cannot convey (non-obvious rationale, invariants, trade-offs, references to issues, etc.). Do NOT write comments that merely restate what the code does.
 
+## Code Style: Comments Describe Present, Not History
+
+Comments must describe the current behavior and intent of the code, not its history. Future readers cannot see code that has been deleted or replaced, so phrases like "previously X, now Y", "fixed: the old implementation did Z", "to keep parity with the legacy logic", or "this used to be a free function" are noise — they reference state that no longer exists in the file.
+
+The only place to record "why we changed it" is the commit message and git blame; the source file itself should read as if the current implementation has always been this way. State the current contract positively (e.g. "single quotes are taken literally") instead of contrasting against a deleted version (e.g. "unlike the previous implementation, single quotes are now respected").
+
+This applies equally to test files: a test comment should explain what behavior the test pins down, not which bug it once caught.
+
 ## C++ Formatting
 
 If the project contains a `.clang-format` file, run `clang-format -i <file>` on every C++ source/header file you modify to ensure consistent formatting.
