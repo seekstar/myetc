@@ -26,10 +26,33 @@ When using C++ designated initializers (e.g., in vector of structs), put each fi
 
 ```cpp
 std::vector<Entry> expected = {
-    {
-        .field1 = value1,
-        .field2 = value2,
-        .field3 = value3,
-    },
+	{
+		.field1 = value1,
+		.field2 = value2,
+		.field3 = value3,
+	},
+};
+```
+
+## C++ Member Declaration Style
+
+This applies to every member of an `enum` / `enum class` / `class` / `struct`. Put each member on its own line, with a trailing comma where the syntax allows. If a member needs a comment, attach the comment to the line(s) immediately above that member. Do NOT cram multiple members on one line.
+
+```cpp
+enum class LogLevel {
+	kDebug,
+	kInfo,
+	// Recoverable errors that the caller may want to handle.
+	kWarn,
+	// Unrecoverable errors; the operation has been aborted.
+	kError,
+};
+
+struct UserRecord {
+	std::string name;
+	// Monotonically increasing; never reused after deletion.
+	uint64_t id;
+	// Empty when the user has not verified their email yet.
+	std::string email;
 };
 ```
