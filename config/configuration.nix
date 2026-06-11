@@ -49,7 +49,6 @@
 		konsole
 		seafile-client
 		seafile-shared
-		gedit
 		noto-fonts-cjk-sans
 		firefox
 		vscode
