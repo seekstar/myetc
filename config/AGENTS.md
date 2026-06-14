@@ -55,6 +55,7 @@ struct UserRecord {
 	// Empty when the user has not verified their email yet.
 	std::string email;
 };
+```
 
 ## Process Safety
 
@@ -63,4 +64,3 @@ Do NOT kill processes by name (for example `pkill db_bench` or `killall db_bench
 ## Git
 
 The user uses git state to track which files have been reviewed. Read-only git commands (status, diff, log, etc.) are fine. Do NOT run git commands that alter state (stash, commit, push, pull, rebase, reset, checkout, etc.) unless the user explicitly asks you to.
-```
