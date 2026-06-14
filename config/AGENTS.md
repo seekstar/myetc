@@ -56,6 +56,10 @@ struct UserRecord {
 	std::string email;
 };
 
+## Process Safety
+
+Do NOT kill processes by name (for example `pkill db_bench` or `killall db_bench`) because it can accidentally kill processes from other sessions. Prefer killing a specific PID or process group that was started and tracked by the current session.
+
 ## Git
 
 The user uses git state to track which files have been reviewed. Read-only git commands (status, diff, log, etc.) are fine. Do NOT run git commands that alter state (stash, commit, push, pull, rebase, reset, checkout, etc.) unless the user explicitly asks you to.
