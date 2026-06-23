@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 npm config set prefix '~/.npm-packages/'
 ln -s $(realpath $(dirname $0))/profile.d/npm.sh ~/.profile.d/
