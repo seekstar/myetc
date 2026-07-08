@@ -18,7 +18,7 @@ Comments describe the current behavior and intent of the code, not its history. 
 
 ## Code Style: Preserve Existing Comments
 
-When refactoring or reorganizing code, do NOT delete or rewrite comments that are already correct and useful. Keep the diff minimal — move comments alongside their code rather than paraphrasing them. Only remove a comment if it has become factually wrong after your change.
+When refactoring or reorganizing code, do NOT rewrite or paraphrase comments that are already correct. If a comment still accurately describes the code after your change, leave it as-is. Only update or remove a comment when it has become factually wrong in its new context.
 
 ## C++ Formatting
 
