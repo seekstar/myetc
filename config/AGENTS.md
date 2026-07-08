@@ -16,6 +16,10 @@ Prefer self-documenting code over comments. Write comments only when they explai
 
 Comments describe the current behavior and intent of the code, not its history. Readers cannot see deleted or replaced code, so phrases like "previously X, now Y", "fixed: the old implementation did Z", or "to keep parity with the legacy logic" are noise. State the current contract positively ("single quotes are taken literally"), not as a contrast against a deleted version. History belongs in commit messages and git blame. This applies equally to tests: comment what behavior the test pins down, not which bug it once caught.
 
+## Code Style: Preserve Existing Comments
+
+When refactoring or reorganizing code, do NOT delete or rewrite comments that are already correct and useful. Keep the diff minimal — move comments alongside their code rather than paraphrasing them. Only remove a comment if it has become factually wrong after your change.
+
 ## C++ Formatting
 
 If the project contains a `.clang-format` file, run `clang-format -i <file>` on every C++ source/header file you modify to ensure consistent formatting.
