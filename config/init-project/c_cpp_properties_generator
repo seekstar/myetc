@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+import json
+import os
+
+#kver = os.popen('uname -r | sed \'s/-[a-z].*//g\'').readline().strip()
+arch = os.popen('uname -m').readline().strip()
+if arch == 'x86_64':
+	arch = 'x86'
+headers = os.popen('ls /usr/src/ | grep $(uname -r | sed \'s/-[a-z].*//g\')')
+includePaths = ["${workspaceFolder}/**"]
+for header in headers.readlines():
+	header = header.strip()
+	includePaths.append(header + '/include')
+	includePaths.append(header + '/arch/x86/include')
+
+print(json.dumps({
+	"configurations": [{
+		"name": "Linux",
+		"includePath": includePaths,
+		"defines": [],
+		"intelliSenseMode": "gcc-x64",
+		"browse": {
+			"path": includePaths,
+			"limitSymbolsToIncludedHeaders": True,
+			"databaseFilename": "",
+		},
+		"compilerPath": "/usr/bin/gcc",
+		"cStandard": "c11",
+		"cppStandard": "c++14",
+	}],
+	"version": 4,
+}, indent='\t'))

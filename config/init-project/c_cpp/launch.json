@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "linux": {
+                "program": "${workspaceFolder}/build/main",
+                "MIMode": "gdb"
+            },
+            "windows": {
+                "program": "${workspaceFolder}/build/main.exe",
+                //"MIMode": "gdb",
+                //"MIDebuggerPath": "D:\\programs\\MinGW\\bin\\gdb.exe"
+                "MIDebuggerPath": "gdb.exe"
+            },
+            "osx": {
+                "program": "${workspaceFolder}/build/main",
+                "MIMode": "lldb"
+            },
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build debug",
+            
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true
+                }/*,
+                {
+                    "text": "-gdb-set follow-fork-mode child"
+                }*/
+            ]
+        },
+        /*{
+            "name": "CompileAndRun",
+            "type": "cdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/main",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build",
+        }*/
+    ]
+}
