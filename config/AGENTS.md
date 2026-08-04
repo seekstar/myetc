@@ -26,7 +26,7 @@ When refactoring or reorganizing code, do NOT rewrite or paraphrase comments tha
 
 ## C++ Formatting
 
-If the project contains a `.clang-format` file, run `clang-format -i <file>` on every C++ source/header file you modify to ensure consistent formatting.
+If the project contains a `.clang-format` file, format every C++ source/header file you modify. When the file is in a Git repository, run `git clang-format -f HEAD -- <file>` so all lines changed relative to `HEAD`, including staged and unstaged changes, are formatted. Do NOT run whole-file `clang-format -i` in a Git repository. Outside a Git repository, use `clang-format -i <file>`.
 
 ## C++ Designated Initializer Style
 
