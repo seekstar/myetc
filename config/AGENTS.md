@@ -8,6 +8,10 @@ Do NOT hard-wrap paragraphs in Markdown. Write each paragraph as a single long l
 
 The AI agent's shell is non-login and non-interactive, so `~/.profile` is not auto-sourced. Every shell command executed by the agent should be prefixed with `source ~/.profile &&` so that the correct toolchain and environment variables are loaded. Example: `source ~/.profile && gcc --version`
 
+## Temporary Files
+
+Do not place task files directly in the top level of `/tmp`. First create a private task directory with `temporary_dir=$(mktemp -d /tmp/task-name.XXXXXX)`, which has permission mode `0700`, and place all temporary files inside it. If a standalone temporary file is unavoidable, use a secure temporary-file API such as `mktemp` or `mkstemp()` that creates it with permission mode `0600`; do not rely on a later `chmod` to restrict access.
+
 ## Code Style: Self-Documenting Code
 
 Prefer self-documenting code over comments. Write comments only when they explain intent or context the code itself cannot convey (non-obvious rationale, invariants, trade-offs, references to issues, etc.). Do NOT write comments that merely restate what the code does.
