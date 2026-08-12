@@ -28,6 +28,8 @@ When refactoring or reorganizing code, do NOT rewrite or paraphrase comments tha
 
 If the project contains a `.clang-format` file, format every C++ source/header file you modify. When the file is in a Git repository, run `git clang-format -f HEAD -- <file>` so all lines changed relative to `HEAD`, including staged and unstaged changes, are formatted. Do NOT run whole-file `clang-format -i` in a Git repository. Outside a Git repository, use `clang-format -i <file>`.
 
+Take extra care when running `git clang-format` after a merge: compare the result against the merge base and check whether formatting introduced unrelated diffs. Revert any formatting changes that are outside the intended changes of the merge.
+
 ## C++ Designated Initializer Style
 
 When using C++ designated initializers (e.g., in vector of structs), put each field on its own line with a trailing comma for readability:
