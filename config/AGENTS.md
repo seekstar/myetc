@@ -30,6 +30,10 @@ If the project contains a `.clang-format` file, format every C++ source/header f
 
 Take extra care when running `git clang-format` after a merge: compare the result against the merge base and check whether formatting introduced unrelated diffs. Revert any formatting changes that are outside the intended changes of the merge.
 
+## C++ Byte-Order Variable Naming
+
+Suffix variables stored in little-endian byte order with `_le`, and variables stored in big-endian byte order with `_be` (for example, `lsn_le` and `file_id_be`). Host-order variables have no byte-order suffix.
+
 ## C++ Designated Initializer Style
 
 When using C++ designated initializers (e.g., in vector of structs), put each field on its own line with a trailing comma for readability:
