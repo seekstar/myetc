@@ -71,6 +71,10 @@ struct UserRecord {
 };
 ```
 
+## Test Style: Behavior-Oriented, Not Coverage-Oriented
+
+Tests pin down the external contract, not internal implementation. Assert observable outcomes (data kept/dropped, return statuses) from the caller's perspective. Name tests after the behavior they verify (e.g. `VersionGcOnBottomLevelFiles`), not after the code path they exercise. Do NOT add tests just to raise coverage numbers, and do not force tests for scenarios only reachable via contrived setup.
+
 ## Process Safety
 
 Do NOT kill processes by name (for example `pkill db_bench` or `killall db_bench`) because it can accidentally kill processes from other sessions. Prefer killing a specific PID or process group that was started and tracked by the current session.
