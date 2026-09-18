@@ -32,7 +32,7 @@ brew install maccy
 #	In some ssh servers: top doesn't work. Tap auto-complete messes up for long file/directory names.
 #	Option works. Go to begin/end of line: ctrl+a/e. Not working: alt+left/right, home/end key
 
-echo -e "Host *\n\tSetEnv TERM=xterm-256color" >> ~/.ssh/config
+printf "Host *\n\tSetEnv TERM=xterm-256color" >> ~/.ssh/config
 brew install ghostty
 mkdir -p ~/.config/ghostty
 ln -s ~/git/myetc/config/ghostty-config ~/.config/ghostty/config
@@ -40,9 +40,8 @@ ln -s ~/git/myetc/config/ghostty-config ~/.config/ghostty/config
 # Make command+` switch to the last focused windows instead of iterate over all windows
 brew install alt-tab
 
+brew install firefox
 brew install wechat
-brew install wechatwork
-brew install tencent-meeting
 
 # Do not generate .DS_Store. But not effective.
 #defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
