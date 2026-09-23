@@ -82,3 +82,7 @@ Do NOT kill processes by name (for example `pkill db_bench` or `killall db_bench
 ## Git
 
 The user uses git state to track which files have been reviewed. Read-only git commands (status, diff, log, stash list, etc.) are fine. Do NOT run git commands that alter state (stash pop, stash apply, stash drop, commit, push, pull, rebase, reset, checkout, etc.) unless the user explicitly asks you to.
+
+## Git: Ignore Build Output Directories
+
+Build output subdirectories such as `target/` (Rust) and `build/` (C++) should be added to `.gitignore`.
