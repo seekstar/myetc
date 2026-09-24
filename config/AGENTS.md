@@ -86,3 +86,7 @@ The user uses git state to track which files have been reviewed. Read-only git c
 ## Git: Ignore Build Output Directories
 
 Build output subdirectories such as `target/` (Rust) and `build/` (C++) should be added to `.gitignore`.
+
+## Git: Commit Messages
+
+Do NOT hard-wrap commit message paragraphs. Keep the subject on its own line; write each body paragraph as a single long line and let the tooling wrap.
