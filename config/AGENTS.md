@@ -16,9 +16,9 @@ Do not place task files directly in the top level of `/tmp`. First create a priv
 
 Prefer self-documenting code over comments. Write comments only when they explain intent or context the code itself cannot convey (non-obvious rationale, invariants, trade-offs, references to issues, etc.). Do NOT write comments that merely restate what the code does.
 
-## Code Style: Comments Describe Present, Not History
+## Comments and Documentation Describe Present, Not History
 
-Comments describe the current behavior and intent of the code, not its history. Readers cannot see deleted or replaced code, so phrases like "previously X, now Y", "fixed: the old implementation did Z", or "to keep parity with the legacy logic" are noise. State the current contract positively ("single quotes are taken literally"), not as a contrast against a deleted version. History belongs in commit messages and git blame. This applies equally to tests: comment what behavior the test pins down, not which bug it once caught.
+Comments and documentation describe current behavior and intent, not implementation history. Readers cannot see deleted or replaced code, so phrases like "previously X, now Y", "fixed: the old implementation did Z", or "to keep parity with the legacy logic" are noise. State the current contract positively ("single quotes are taken literally"), not as a contrast against a deleted version. History belongs in commit messages and git blame. This applies equally to tests: comment what behavior the test pins down, not which bug it once caught.
 
 ## Code Style: Preserve Existing Comments
 
