@@ -5,6 +5,7 @@ mkdir -p ~/.local/bin
 
 ./helper/git.sh
 
+cd config
 if [ ! -d ~/.profile.d ]; then
 	mkdir ~/.profile.d
 	cat >> ~/.profile <<EOF
@@ -22,10 +23,19 @@ done
 unset -f prepend_path
 EOF
 fi
+cp profile.d/* ~/.profile.d/
 
-THISDIR=$(pwd)
-cd config
-cp -r profile.d/* ~/.profile.d/
+if [ ! -d ~/.alias.d ]; then
+	mkdir ~/.alias.d
+	cat >> ~/.alias <<EOF
+for i in "\$HOME"/.alias.d/*.sh; do
+	[ -f "\$i" ] && . "\$i"
+done
+EOF
+	echo '. ~/.alias' >> ~/.bashrc
+fi
+cp alias.d/* ~/.alias.d/
+
 cp rc ~/.rc
 mkdir -p ~/.rc.d
 mkdir -p ~/.config/systemd/user
