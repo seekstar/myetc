@@ -4,6 +4,5 @@ n stable
 PATH="$PATH"
 
 # latest npm
-cnpm install npm@latest -g
+npm install -g npm@latest --registry=https://registry.npmmirror.com
 PATH="$PATH"
-
