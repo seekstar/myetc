@@ -1,8 +1,13 @@
 # Personal AGENTS.md (user-level, applies to all projects for this user)
 
-## Markdown Style
+## 文档风格
 
-Do NOT hard-wrap paragraphs in Markdown. Write each paragraph as a single long line and let the renderer handle wrapping. Only use explicit line breaks for real structural breaks (new paragraph, list item, heading, code block, etc.).
+- 尽量别用破折号。可读性很差。注释也是。
+- 尽量不要用编号列举，不然往里面插入要改后面所有的编号。尽量用 bullet。
+
+如果是新文档，采用如下风格。如果是已有文档，则按已有的风格。
+
+- Do NOT hard-wrap paragraphs in Markdown. Write each paragraph as a single long line and let the renderer handle wrapping. Only use explicit line breaks for real structural breaks (new paragraph, list item, heading, code block, etc.).
 
 ## Shell Environment
 
